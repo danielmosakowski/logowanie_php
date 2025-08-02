@@ -1,1 +1,2 @@
 Daniel;Mosakowski;daniel@wp.pl;123456;31
+Adam;Adamski;adam@wp.pl;123456;20
