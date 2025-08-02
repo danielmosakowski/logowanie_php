@@ -9,9 +9,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $haslo = $_POST['haslo'];
     $wiek = $_POST['wiek'];
 
-    $blad = '';
+
     if(!is_numeric($wiek) || $wiek <18) {
-        $blad = "Musisz mieć co najmniej 18 lat.";
+        $_SESSION['blad']= "Musisz mieć co najmniej 18 lat.";
+        header("Location: index.php");
+        exit;
     }
 
     $haslo_hash = password_hash($haslo, PASSWORD_DEFAULT);

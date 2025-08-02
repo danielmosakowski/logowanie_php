@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    $blad = $_SESSION['blad'] ?? '';
+    unset($_SESSION['blad']);
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -8,7 +16,6 @@
 <body>
 
 
-</body>
 
 <h2>Formularz rejestracyjny</h2>
 
@@ -18,7 +25,7 @@
     }
 ?>
 
-<form method="POST" action="processs.php">
+<form method="POST" action="process.php">
     <label>Imię:</label>
     <input type="text" name="imie" required>
 
