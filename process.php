@@ -19,10 +19,23 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $dane = implode(";", [$imie,$nazwisko,$email,$haslo,$wiek]). "\n";
     file_put_contents("data/users.txt", $dane, FILE_APPEND);
 
+    $_SESSION['imie']=$imie;
+    $_SESSION['nazwisko']= $nazwisko;
+    $_SESSION['email']= $email;
+    $_SESSION['wiek']= $wiek;
 
+    if(!isset($_COOKIE['visits'])){
+        setcookie('visits',1,time()+3600);
+    } else {
+        $visits = $_COOKIE['visits']+1;
+        setcookie('visits', $visits, time()+3600);
+    }
 
+    header("Location: panel.php");
+    exit;
+} else {
+    echo "Błąd: nieprawidlowe żądanie.";
 }
-
 
 
 
