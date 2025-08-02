@@ -12,6 +12,12 @@
 
 <h2>Formularz rejestracyjny</h2>
 
+<?php
+    if ($blad){
+        echo htmlspecialchars($blad);
+    }
+?>
+
 <form method="POST" action="processs.php">
     <label>Imię:</label>
     <input type="text" name="imie" required>
