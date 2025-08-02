@@ -61,17 +61,7 @@
         foreach ($users as $user){
             echo "<p>" .htmlspecialchars($user["imie"]) ." " .htmlspecialchars($user["nazwisko"]) ."</p>";
         }
-
-
-
-
-
     ?>
-
-
-
-
-
 
 </body>
 
