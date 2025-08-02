@@ -1,50 +1,17 @@
-<?php
-    session_start();
-    $blad = $_SESSION['blad'] ?? '';
-    unset($_SESSION['blad']);
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <title>Formularz rejestracyjny</title>
+    <title>Strona główna</title>
 </head>
 
 <body>
-
-
-
-<h2>Formularz rejestracyjny</h2>
-
-<?php
-    if ($blad){
-        echo htmlspecialchars($blad);
-    }
-?>
-
-<form method="POST" action="process.php">
-    <label>Imię:</label>
-    <input type="text" name="imie" required>
-
-    <label>Nazwisko:</label>
-    <input type="text" name="nazwisko" required>
-
-    <label>Email:</label>
-    <input type="email" name="email" required>
-
-    <label>Hasło:</label>
-    <input type="password" name="haslo" required>
-
-    <label>Wiek:</label>
-    <input type="number" name="wiek" required>
-
-    <input type="submit" value="Zarejestruj">
-
-</form>
+    <h1>Witaj na stronie</h1>
+    <a href="register.php">Rejestracja</a>
+    <a href="login.php">Logowanie</a>
 
 </body>
+
 
 </html>
