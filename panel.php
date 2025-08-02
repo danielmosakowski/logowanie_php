@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    if(!isset($_SESSION['email'])){
+        header("Location: index.php");
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -12,14 +17,12 @@
         body { font-family: Arial, sans-serif; padding: 20px; }
         p { margin-bottom: 10px; }
     </style>
+
 </head>
 
 <body>
+    <a href="logout.php">Wyloguj</a>
     <?php
-        if(!isset($_SESSION['email'])){
-            header("LocationL index.php");
-            exit;
-        }
 
         echo "<h2>Witaj, ". htmlspecialchars($_SESSION["imie"]) ."</h2>";
         
@@ -62,21 +65,6 @@
             echo "<p>" .htmlspecialchars($user["imie"]) ." " .htmlspecialchars($user["nazwisko"]) ."</p>";
         }
     ?>
-
+    <a href="index.php">Powrót do strony głównej</a>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </html>

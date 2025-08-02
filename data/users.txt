@@ -1,3 +1,2 @@
-Daniel;Mosakowski;daniel@wp.pl;123456;31
-Adam;Adamski;adam@wp.pl;123456;20
-Kuba;Kubiski;kuba@wp.pl;123456;40
+daniel;daniel;daniel@wp.pl;$2y$10$yiul8ff9lzi1.jPAG1u9su7ybtoQMBn5bh/5h0IdAjvJtnAQdsMuW;20
+kuba;kuba;kuba@wp.pl;$2y$10$reFz08HVPh7AyKui80X10eUy2x6g3Ex8vgtaWC8C9VvI7HI70uSw6;40

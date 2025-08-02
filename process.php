@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
     $haslo_hash = password_hash($haslo, PASSWORD_DEFAULT);
 
-    $dane = implode(";", [$imie,$nazwisko,$email,$haslo,$wiek]). "\n";
+    $dane = implode(";", [$imie,$nazwisko,$email,$haslo_hash,$wiek]). "\n";
     file_put_contents("data/users.txt", $dane, FILE_APPEND);
 
     $_SESSION['imie']=$imie;

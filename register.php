@@ -44,7 +44,7 @@
     <input type="submit" value="Zarejestruj">
 
 </form>
-
+<a href="index.php" class="back-link">Powrót do strony głównej</a>
 </body>
 
 </html>
